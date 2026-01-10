@@ -1,23 +1,490 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Home</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <!--
-      Need a visual blank slate?
-      Remove all code in `styles.css`!
-    -->
-    <link rel="stylesheet" href="styles.css" />
-    <script type="module" src="script.js"></script>
-  </head>
-  <body>
-    <nav>
-      <a href="/" aria-current="page">Home</a>
-      <a href="/page2.html">Other page</a>
-    </nav>
+
+    <!-- Schema Markup for enhanced search snippets -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "갑상선암보험금 청구 완벽 가이드",
+      "description": "2026년 최신 기준으로 갑상선암보험금 청구 방법을 안내합니다. 소액암 분류 기준, 보험금 평균 금액, 가입 시기별 보상 차이점, 분쟁 해결 팁까지 전문가가 상세히 설명해드립니다.",
+      "url": "https://yourdomain.com",
+      "about": {
+        "@type": "MedicalCondition",
+        "name": "갑상선암",
+        "description": "갑상선에 발생하는 악성종양으로, 최근 보험금 지급과 관련하여 많은 분쟁이 발생하고 있습니다."
+      },
+      "author": {
+        "@type": "Organization",
+        "name": "보험금 전문 컨설팅"
+      },
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "홈페이지",
+            "item": "https://yourdomain.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "보험금 가이드",
+            "item": "https://yourdomain.com/insurance-guide"
+          }
+        ]
+      }
+    }
+    </script>
+
+    <style>
+        /* 기본 스타일 */
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+        
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.8;
+            background-color: #f0f4f8; /* 부드러운 배경색 */
+            color: #333;
+        }
+        header {
+            background-color: #007bff; /* 메인 색상 */
+            color: white;
+            padding: 3rem 1.5rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            border-bottom-left-radius: 50% 20px;
+            border-bottom-right-radius: 50% 20px;
+        }
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin: 0;
+            letter-spacing: -1px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.15);
+        }
+        header p {
+            font-size: 1.2rem;
+            font-weight: 300;
+            margin-top: 0.5rem;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 1.5rem;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        nav a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        /* 메인 콘텐츠 영역 */
+        main {
+            max-width: 960px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        section {
+            background-color: white;
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+            margin-bottom: 2.5rem;
+        }
+        h2 {
+            color: #007bff;
+            font-size: 2rem;
+            margin-top: 0;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid #007bff;
+            display: block;
+        }
+        h3 {
+            color: #333;
+            font-size: 1.5rem;
+            margin-top: 1.5rem;
+            margin-bottom: 0.8rem;
+            font-weight: 700;
+        }
+        p, ul, dl {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: #4a4a4a;
+        }
+        ul {
+            list-style: disc;
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 0.8rem;
+        }
+
+        /* 키워드 태그 영역 */
+        .keyword-tags {
+            margin: 1.5rem 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .keyword-tags a {
+            background-color: #e3f2fd;
+            color: #007bff;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.95rem;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        .keyword-tags a:hover {
+            background-color: #bbdefb;
+        }
+
+        /* 데이터 시각화 (테이블) */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1.5rem;
+            font-size: 1rem;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        th, td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #007bff;
+            color: white;
+            font-weight: 700;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .highlight-text {
+            color: #d9534f; /* 경고/강조 색상 */
+            font-weight: 700;
+        }
+        .sub-heading {
+            color: #555;
+            font-weight: 500;
+            font-size: 1.2rem;
+            margin-top: 2rem;
+        }
+
+        /* FAQ 아코디언 */
+        dl dt {
+            cursor: pointer;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-top: 10px;
+            background-color: #f7f7f7;
+            font-weight: 500;
+            transition: background-color 0.3s ease;
+        }
+        dl dt:hover {
+            background-color: #e9e9e9;
+        }
+        dl dt::after {
+            content: '+';
+            float: right;
+            font-size: 1.2rem;
+        }
+        dl dt.active::after {
+            content: '-';
+        }
+        dl dd {
+            padding: 1rem;
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            border-top: none;
+            border-radius: 0 0 8px 8px;
+            margin-bottom: 10px;
+            display: none; /* 초기 상태 숨김 */
+        }
+        dl dt.active + dd {
+            display: block; /* 활성화 시 보이기 */
+        }
+
+        /* CTA 버튼 */
+        .cta-button {
+            display: inline-block;
+            background-color: #ff6f61; /* 강조 색상 */
+            color: white;
+            font-weight: 700;
+            padding: 1.2rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            margin: 2rem 0;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(255, 111, 97, 0.4);
+        }
+        .cta-button:hover {
+            background-color: #e65c52;
+            transform: translateY(-3px);
+        }
+
+        /* 폼 섹션 (체류 시간 증진) */
+        .consult-form input, .consult-form textarea {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+        .consult-form button {
+            background-color: #007bff;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1.1rem;
+            width: 100%;
+            transition: background-color 0.3s ease;
+        }
+        .consult-form button:hover {
+            background-color: #0056b3;
+        }
+
+        /* 외부 링크 섹션 */
+        .external-links ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .external-links li {
+            margin-bottom: 10px;
+        }
+        .external-links a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .external-links a:hover {
+            text-decoration: underline;
+        }
+
+        /* 푸터 */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.9rem;
+            color: #888;
+            background-color: #e9ecef;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>갑상선암보험금, 제대로 알고 청구하세요</h1>
+        <p>복잡한 갑상선암 보험금 청구, 2026년 최신 기준으로 완벽 분석</p>
+        <nav>
+            <ul>
+                <li><a href="#coverage">보상 기준</a></li>
+                <li><a href="#claim-process">청구 절차</a></li>
+                <li><a href="#disputes">분쟁 사례</a></li>
+                <li><a href="#contact">전문 상담</a></li>
+            </ul>
+        </nav>
+    </header>
+
     <main>
-      <h1>Home page</h1>
+        <section id="coverage">
+            <h2>갑상선암보험금: '소액암' 논란의 핵심 파헤치기</h2>
+            <p><strong>갑상선암보험금</strong> 청구는 환자분들이 가장 많이 겪는 보험 분쟁 중 하나입니다. 갑상선암은 국내에서 발생률이 가장 높은 암이지만, 2010년대 이후로 보험 약관이 변경되면서 일반암이 아닌 <span class="highlight-text">소액암(Minor Cancer)</span>으로 분류되는 경우가 많아졌습니다. 이로 인해 과거 가입한 보험과 최근 가입한 보험의 보상 금액에 엄청난 차이가 발생하며, '갑상선암보험금액'에 대한 혼란이 가중되고 있습니다.</p>
+            <p>과거에는 갑상선암 진단 시 일반암 진단금 전액(예: 3천만~5천만원)이 지급되었지만, 현재는 소액암으로 분류되어 일반암 진단금의 10%~20%(예: 3백만~1천만원)만 지급되는 것이 일반적입니다. 따라서 보험금을 청구하기 전에 가입한 상품의 약관을 정확하게 확인하는 것이 중요합니다.</p>
+
+            <div class="keyword-tags" aria-label="갑상선암보험 관련 키워드">
+                <a href="#coverage">갑상선암보험금청구</a>
+                <a href="#coverage">갑상선암소액암분류</a>
+                <a href="#disputes">갑상선암D코드C코드차이</a>
+                <a href="#price">갑상선암보험금평균</a>
+                <a href="#claim-process">갑상선암보험금분쟁해결</a>
+                <a href="#contact">갑상선암보험상담</a>
+                <a href="#recommend">갑상선암보험가입추천</a>
+            </div>
+
+            <h3 class="sub-heading">갑상선암 보험금, 가입 시기별 보상금액 차이점 분석</h3>
+            <p>갑상선암 보험금 보상 금액을 결정짓는 가장 중요한 요소는 바로 <span class="highlight-text">가입 시기</span>입니다. 2000년대 초반에 가입한 상품들은 대부분 갑상선암을 일반암으로 취급했지만, 2007년 금융감독원의 표준약관 개정 이후 보험사들이 약관을 변경하며 소액암으로 분류하기 시작했습니다. 2011년, 2016년 등 주요 시점별로 약관이 계속 개정되었으므로, 자신의 보험 가입 시점을 확인하는 것이 필수입니다.</p>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>가입 시기 (약관 기준)</th>
+                        <th>갑상선암 분류 기준</th>
+                        <th>대략적인 보상 금액 (일반암 진단금 3천만원 기준)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>~2007년 이전 (구 약관)</strong></td>
+                        <td>일반암 (분류코드 C73)</td>
+                        <td><span class="price-highlight">3,000만원 (100% 지급)</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>2007년 ~ 2011년 사이 (변경 약관)</strong></td>
+                        <td>소액암 (일반암 진단금의 10%~20%)</td>
+                        <td><span class="price-highlight">300만원 ~ 600만원</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>2011년 이후 (신 약관)</strong></td>
+                        <td>소액암 (대부분의 보험사 동일 적용)</td>
+                        <td><span class="price-highlight">300만원 ~ 600만원</span></td>
+                    </tr>
+                </tbody>
+            </table>
+            <p><strong>참고:</strong> 위 표는 대략적인 예시이며, 실제 보상 금액은 상품 및 약관 내용에 따라 상이할 수 있습니다. 특히 <strong>"갑상선암 수술비", "갑상선암 입원 일당"</strong> 등 특약 가입 여부에 따라 추가 보상이 가능합니다. 자신의 가입 시기에 맞는 정확한 정보를 파악하는 것이 중요합니다.</p>
+            
+            <h3 class="sub-heading">갑상선암 D코드와 C코드의 차이점: 보험금 분쟁의 시작점</h3>
+            <p><strong>갑상선암보험금</strong> 분쟁에서 가장 핵심이 되는 키워드는 <span class="highlight-text">D코드와 C코드의 차이점</span>입니다. 갑상선암은 'D코드(D44.0: 양성 신생물)'와 'C코드(C73: 악성 신생물)' 두 가지로 진단될 수 있습니다. C코드는 일반적으로 암으로 분류되어 보험금 지급 대상이 되지만, 일부 초기 단계의 갑상선암은 D코드로 진단되는 경우가 있습니다. 이 경우 보험사는 진단금을 지급하지 않으려는 분쟁이 발생합니다.</p>
+            <p>특히 '갑상선 미세유두암(Papillary microcarcinoma)'의 경우, 크기가 매우 작고 전이 가능성이 낮다는 이유로 D코드로 진단하려는 경향이 있습니다. 하지만 대법원 판례에 따르면 D코드로 진단된 경우라도 임상학적 악성도가 인정되면 C코드로 변경하여 보험금을 청구할 수 있습니다. D코드 진단을 받더라도 포기하지 않고 전문가의 도움을 받아야 하는 이유입니다.</p>
+        </section>
+
+        <section id="claim-process">
+            <h2>갑상선암보험금 청구 절차 및 필요 서류</h2>
+            <p><strong>갑상선암 진단비</strong> 청구는 진단 확정 후 가능한 한 빨리 진행하는 것이 좋습니다. 복잡한 서류 준비와 보험사 심사 과정에 미리 대비해야 합니다. 2026년 기준으로 청구 절차를 상세히 안내해 드립니다.</p>
+
+            <h3>1단계: 진단 확정 및 서류 준비</h3>
+            <p>가장 중요한 서류는 <strong>보험금 청구서</strong>와 <strong>진단서</strong>입니다. 특히 진단서에는 질병분류코드(C73 등), 진단명, 진단일, 그리고 암 확정 여부가 명확히 기재되어야 합니다. 또한, 조직검사 결과지(Pathology report)는 암 확정의 근거 자료로 반드시 제출해야 합니다. 보험금 청구를 위해서는 다음 서류들이 필요합니다.</p>
+            <ul>
+                <li>보험금 청구서 (보험사 양식)</li>
+                <li>진단서 (질병분류코드 및 확진 여부 포함)</li>
+                <li>조직검사결과지 (또는 병리과 보고서)</li>
+                <li>진료비 영수증 및 세부내역서</li>
+                <li>입퇴원 확인서 (수술 시)</li>
+                <li>신분증 사본 및 통장 사본</li>
+            </ul>
+            <p><strong>팁:</strong> 일부 보험사는 D코드로 진단된 경우 C코드로 변경 요청 시 의료자문(Medical advice)을 요구할 수 있습니다. 이 경우 의료자문을 거부하거나 신중하게 대처해야 합니다. 의료자문 결과가 D코드로 나오면 보험금 지급이 거절될 가능성이 높기 때문입니다.</p>
+
+            <h3>2단계: 보험금 심사 및 지급</h3>
+            <p>서류 제출 후 보험사는 약관에 따라 심사를 진행합니다. 심사 과정에서 보험사는 환자의 과거 병력, 진단 경위, 조직검사 결과 등을 면밀히 검토합니다. 특히 암의 악성 여부를 판단하기 위해 현장 실사를 나오거나 의료자문을 요청할 수 있습니다. 일반적인 심사 기간은 3일~7일 이내이지만, 분쟁 소지가 있는 경우는 몇 주 이상 소요될 수 있습니다.</p>
+
+            <h3>3단계: 분쟁 발생 시 대처 방안</h3>
+            <p>만약 보험사가 "갑상선암은 소액암이라서 10%만 지급한다"고 통보하거나, "D코드라서 암이 아니다"라고 주장할 경우 분쟁이 발생합니다. 이 때 무조건 보험사의 통보를 받아들이기보다는, 금융감독원이나 한국소비자원의 분쟁조정을 신청하거나, 보험금 전문 변호사/손해사정사의 조언을 받는 것이 현명합니다. 특히 <strong>"갑상선암보험금 소송"</strong>을 통해 전액 지급 판례를 받은 사례도 많으므로, 전문가와 상담하여 대응 방안을 모색해야 합니다.</p>
+        </section>
+
+        <section id="disputes">
+            <h2>갑상선암보험금 분쟁의 주요 쟁점과 해결 전략</h2>
+            <p><strong>갑상선암보험금 분쟁</strong>은 대부분 약관 해석의 차이, 특히 소액암 분류의 적절성 여부와 D코드 진단의 타당성 여부에서 발생합니다. 2026년 현재에도 보험사와 소비자 간의 팽팽한 대립이 이어지고 있으며, 분쟁 해결을 위해서는 전문적인 지식이 필수적입니다. 아래는 주요 분쟁 쟁점과 그 해결 전략입니다.</p>
+
+            <h3>쟁점 1: '소액암' 분류가 정당한가? (가입 시기별 차이점)</h3>
+            <p>앞서 설명했듯이, 갑상선암이 '일반암'에서 '소액암'으로 재분류된 것은 보험사들의 손해율 증가에 따른 조치였습니다. 하지만 가입자 입장에서는 가입 당시 약관을 기준으로 보상을 받아야 하므로, 가입 시기별 약관을 꼼꼼히 대조해야 합니다. 특히 구 약관(2007년 이전)을 보유한 경우 보험사가 '소액암'으로 분류하여 지급을 거부할 때 법률적 대응이 가능합니다. 이 분쟁을 해결하기 위해서는 <strong>약관 변경 전후의 효력</strong>에 대한 법률적 검토가 중요합니다.</p>
+
+            <h3>쟁점 2: D코드 진단 분쟁 (암 진단 기준)</h3>
+            <p>보험사는 종종 갑상선암을 D코드로 진단한 뒤 보험금 지급을 거절합니다. 하지만 대법원 판례(2009두23635)에 따르면, 단순히 D코드 진단이라는 이유만으로 보험금 지급을 거절할 수 없습니다. 중요한 것은 <strong>'임상학적 악성도'</strong>입니다. 갑상선암이 조직검사 결과상 악성으로 확인되었고, 수술 및 방사성 요오드 치료 등 악성 종양에 준하는 치료를 받았다면 C코드로 변경하여 청구할 수 있습니다. <strong>D코드 진단으로 보험금이 거절된 사례</strong>가 있다면, 반드시 전문가의 상담을 받아야 합니다.</p>
+
+            <h3>쟁점 3: 암 진단비 이외의 보상 (특약 활용)</h3>
+            <p>진단금 외에도 수술비, 입원 일당, 항암 치료비 등 특약으로 가입된 보상 항목이 있는지 확인해야 합니다. 진단금은 소액으로 지급되더라도 수술비 특약이 있다면 추가적인 보상을 받을 수 있습니다. <strong>"갑상선암보험금 내돈내산 후기"</strong>를 보면 많은 사람들이 특약을 통해 실질적인 보상을 받은 사례를 찾아볼 수 있습니다. 따라서 보험 약관의 모든 특약 항목을 꼼꼼히 확인하는 것이 중요합니다.</p>
+            
+            <h3 class="sub-heading">갑상선암보험 가입 순위 및 추천 기준</h3>
+            <p>현재 갑상선암 진단비 보상 금액이 낮아진 상황에서, 많은 분들이 새로운 보험 상품을 찾습니다. <strong>갑상선암보험 가입</strong> 시 고려해야 할 사항은 다음과 같습니다.</p>
+            <ul>
+                <li><strong>소액암 진단비 보상 한도:</strong> 소액암 진단금이 높게 책정된 상품을 선택합니다.</li>
+                <li><strong>특약 구성:</strong> 수술비 특약, 항암 치료비 특약 등 실질적인 치료 비용을 보장하는 특약을 보강합니다.</li>
+                <li><strong>갱신형 vs 비갱신형:</strong> 나이가 젊을 때 비갱신형으로 가입하면 보험료 변동 없이 오랫동안 보장받을 수 있습니다.</li>
+            </ul>
+        </section>
+
+        <section id="faq">
+            <h2>자주 묻는 질문 (FAQ)</h2>
+            <p><strong>네이버 지식iN</strong>에서 <strong>'갑상선암보험금'</strong>으로 검색되는 주요 궁금증을 정리했습니다.</p>
+            <dl>
+                <dt tabindex="0" aria-expanded="false" class="active">Q. 갑상선암 진단 후 보험사에서 소액암으로 분류하여 일반암 진단금의 10%만 지급한다고 합니다. 어떻게 해야 하나요?</dt>
+                <dd>A. 보험 가입 시기를 확인해야 합니다. 만약 2007년 이전에 가입한 상품이라면, 약관상 갑상선암이 일반암으로 분류되었을 가능성이 높습니다. 이 경우 보험사의 통보를 거부하고, 약관 해석을 바탕으로 일반암 진단금 전액을 청구할 수 있습니다. 전문가와 상담하여 약관을 면밀히 검토하고 분쟁조정 또는 소송을 진행할 수 있습니다.</dd>
+                <dt tabindex="0" aria-expanded="false">Q. 갑상선암 진단비로 <span class="price-highlight">평균 얼마</span>를 받을 수 있나요?</dt>
+                <dd>A. <strong>갑상선암보험금 평균 금액</strong>은 가입 시기와 약관에 따라 천차만별입니다. 2007년 이전 구약관 가입자의 경우 3,000만원 이상의 일반암 진단비를 받는 경우가 많지만, 2011년 이후 신약관 가입자는 300~1,000만원 수준의 소액암 진단비를 받습니다. 정확한 <span class="price-highlight">예상 금액</span>은 가입하신 상품의 약관을 확인해야 알 수 있습니다.</dd>
+                <dt tabindex="0" aria-expanded="false">Q. 갑상선암보험 가입을 <span class="price-highlight">추천</span>하나요? <span class="price-highlight">장단점</span>이 궁금합니다.</dt>
+                <dd>A. 갑상선암은 발생률이 높지만, 생존율이 높고 치료비 부담이 상대적으로 낮은 편입니다. 따라서 고액의 진단비를 집중적으로 보장하는 대신, 수술비나 입원 일당 특약을 강화하는 것이 합리적일 수 있습니다. <strong>장점</strong>은 발생률이 높아 실질적인 보상을 받을 확률이 높다는 것이며, <strong>단점</strong>은 소액암 분류로 인해 진단비가 낮다는 것입니다.</dd>
+                <dt tabindex="0" aria-expanded="false">Q. 암보험을 <span class="price-highlight">저렴한곳</span>이나 <span class="price-highlight">싼곳</span>에서 가입하려면 어떻게 해야 하나요?</dt>
+                <dd>A. 보험 비교 사이트를 활용하여 다양한 상품의 보험료와 보장 내용을 비교해 보는 것이 좋습니다. <strong>보험 순위</strong>나 <strong>추천 상품</strong>을 참고하되, 무조건 저렴한 상품보다는 자신의 병력이나 가족력에 맞는 보장 범위를 선택하는 것이 중요합니다. 특히 소액암 진단금이 높거나 재진단암 보장이 포함된 상품이 장기적으로 유리할 수 있습니다.</dd>
+            </dl>
+        </section>
+
+        <section class="external-links">
+            <h2>갑상선암 및 보험 관련 신뢰성 있는 정보 출처</h2>
+            <p>신뢰할 수 있는 외부 자료를 통해 더 정확한 정보를 확인하고, 현명하게 보험 분쟁에 대처하세요.</p>
+            <ul>
+                <li><a href="https://www.fss.or.kr/" target="_blank">금융감독원 (FSS) - 보험 관련 민원 및 분쟁 조정 신청</a></li>
+                <li><a href="https://namu.wiki/w/%EA%B0%91%EC%83%81%EC%84%A0%EC%95%94" target="_blank">갑상선암 관련 나무위키 상세 정보</a></li>
+                <li><a href="https://www.molit.go.kr/" target="_blank">보건복지부 (Ministry of Health and Welfare) - 의료 정책 및 암 등록 통계</a></li>
+                <li><a href="https://www.kca.go.kr/" target="_blank">한국소비자원 (KCA) - 보험 관련 소비자 상담 및 분쟁 조정</a></li>
+                <li><a href="https://yourdomain.com/blog/thyroid-cancer-insurance-case-study" target="_blank">우리 업체가 분석한 갑상선암보험금 청구 사례 연구 (블로그)</a></li>
+            </ul>
+        </section>
+
+        <section id="contact">
+            <h2>무료 보험금 청구 전문 상담 및 견적 문의</h2>
+            <p><strong>갑상선암보험금</strong> 청구는 가입자에게 불리한 약관 해석으로 인해 분쟁이 발생하기 쉽습니다. 전문가와 상담하여 <span class="highlight-text">내돈내산</span> 후기처럼 확실하게 보상받을 수 있는 전략을 수립하세요. 지금 바로 무료 상담을 신청하시면 2026년 최신 기준으로 정확한 보상 금액을 예측해 드립니다.</p>
+            <form class="consult-form">
+                <label for="name">이름:</label>
+                <input type="text" id="name" name="name" required placeholder="이름을 입력해주세요">
+
+                <label for="phone">연락처:</label>
+                <input type="tel" id="phone" name="phone" required placeholder="연락 가능한 전화번호를 입력해주세요">
+
+                <label for="insurance-info">가입하신 보험사 및 가입 시기:</label>
+                <input type="text" id="insurance-info" name="insurance-info" placeholder="예: A보험사, 2005년 가입">
+
+                <label for="message">상담 내용 (현재 상황을 자세히 설명해주세요):</label>
+                <textarea id="message" name="message" rows="5" placeholder="진단 코드(D코드/C코드), 보험사 청구 여부, 분쟁 상황 등을 기재해 주세요."></textarea>
+
+                <button type="submit">무료 상담 신청하기</button>
+            </form>
+            <p class="sub-heading" style="text-align: center; margin-top: 2rem;">📞 전화 문의: <a href="tel:01012345678" style="color: #007bff; text-decoration: none;">010-1234-5678</a></p>
+        </section>
     </main>
-  </body>
-</html>
+
+    <footer>
+        <p>&copy; 2025 갑상선암보험금 전문 컨설팅. 모든 권리 보유.</p>
+    </footer>
+
+    <script>
+        // FAQ 아코디언 기능 (접기/펼치기)
+        document.querySelectorAll('dl dt').forEach((dt) => {
+            dt.addEventListener('click', () => {
+                const isActive = dt.classList.contains('active');
+                // 모든 dd 태그 숨기기
+                document.querySelectorAll('dl dd').forEach(dd => dd.style.display = 'none');
+                // 모든 dt 태그 active 클래스 제거
+                document.querySelectorAll('dl dt').forEach(item => {
+                    item.classList.remove('active');
+                    item.setAttribute('aria-expanded', 'false');
+                });
+                
+                if (!isActive) {
+                    // 클릭한 dt에 active 클래스 추가 및 dd 보여주기
+                    dt.classList.add('active');
+                    dt.setAttribute('aria-expanded', 'true');
+                    dt.nextElementSibling.style.display = 'block';
+                }
+            });
+            dt.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    dt.click();
+                }
+            });
+        });
+    </script>
+
+
+  
